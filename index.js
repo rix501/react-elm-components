@@ -1,23 +1,28 @@
-var React = require('react');
+import React, { Component }  from 'react';
 
-module.exports = React.createClass({
-	initialize: function(node) {
+export default Compm extends Component {
+	constructor() {
+    super();
+    this.init = this.init.bind(this);
+  }
+
+  init(node) {
 		if ( node === null ) {
 			return;
 		}
 
-		var app = this.props.src.embed(node, this.props.flags);
+		let app = this.props.src.embed(node, this.props.flags);
 
 		if (typeof this.props.ports !== 'undefined') {
 			this.props.ports(app.ports);
 		}
 	},
 
-	shouldComponentUpdate: function(prevProps) {
+	shouldComponentUpdate(prevProps) {
 		return false;
-	},
+	}
 
-	render: function () {
+	render() {
 		return React.createElement('div', { ref: this.initialize });
 	}
-});
+}
