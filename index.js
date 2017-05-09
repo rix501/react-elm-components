@@ -16,13 +16,13 @@ export default class Compm extends Component {
 		if (typeof this.props.ports !== 'undefined') {
 			this.props.ports(app.ports);
 		}
-	},
+	}
 
 	shouldComponentUpdate(prevProps) {
 		return false;
 	}
 
 	render() {
-		return React.createElement('div', { ref: this.initialize });
+		return React.createElement('div', { ref: this.init });
 	}
 }
