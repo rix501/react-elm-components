@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 
-export default Compm extends Component {
+export default class Compm extends Component {
 	constructor() {
     super();
     this.init = this.init.bind(this);
